@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>CETeam.CombatExtended</li>
+      <li>kazepsi.irbm</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- IRBM_CIWS_Guns: vanilla 18 dmg / 2.0 AP / interval 3 -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="IRBM_CIWS_Guns"]/modExtensions/li[@Class="IRBM.CIWSExtension"]/groundDamageAmount</xpath>
+          <value>
+            <groundDamageAmount>32</groundDamageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="IRBM_CIWS_Guns"]/modExtensions/li[@Class="IRBM.CIWSExtension"]/groundDamageArmorPenetration</xpath>
+          <value>
+            <groundDamageArmorPenetration>30</groundDamageArmorPenetration>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="IRBM_CIWS_Guns"]/modExtensions/li[@Class="IRBM.CIWSExtension"]/groundDamageInterval</xpath>
+          <value>
+            <groundDamageInterval>4</groundDamageInterval>
+          </value>
+        </li>
+
+        <!-- IRBM_CIWS_Laser: vanilla 64 dmg / 2.0 AP -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="IRBM_CIWS_Laser"]/modExtensions/li[@Class="IRBM.CIWSExtension"]/groundDamageAmount</xpath>
+          <value>
+            <groundDamageAmount>52</groundDamageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="IRBM_CIWS_Laser"]/modExtensions/li[@Class="IRBM.CIWSExtension"]/groundDamageArmorPenetration</xpath>
+          <value>
+            <groundDamageArmorPenetration>20</groundDamageArmorPenetration>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

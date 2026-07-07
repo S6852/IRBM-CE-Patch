@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>CETeam.CombatExtended</li>
+      <li>kazepsi.irbm</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- IRBM_Warhead_Tactical_HE: vanilla 150 dmg / 1.5 AP / 14.9 radius, clusterCount=2 -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_HE"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/damageAmount</xpath>
+          <value>
+            <damageAmount>260</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_HE"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/armorPenetration</xpath>
+          <value>
+            <armorPenetration>18</armorPenetration>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_HE"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>6.5</explosionRadius>
+          </value>
+        </li>
+
+        <!-- IRBM_Warhead_Tactical_Cluster: vanilla 50 dmg / 0.8 AP / 7.9 radius, clusterCount=25 -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Cluster"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/damageAmount</xpath>
+          <value>
+            <damageAmount>45</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Cluster"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/armorPenetration</xpath>
+          <value>
+            <armorPenetration>16</armorPenetration>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Cluster"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>4.8</explosionRadius>
+          </value>
+        </li>
+
+        <!-- IRBM_Warhead_Tactical_Inferno: vanilla 80 dmg / 1.0 AP / 9.9 radius, clusterCount=10 -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Inferno"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/damageAmount</xpath>
+          <value>
+            <damageAmount>95</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Inferno"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/armorPenetration</xpath>
+          <value>
+            <armorPenetration>14</armorPenetration>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Inferno"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>5.8</explosionRadius>
+          </value>
+        </li>
+
+        <!-- IRBM_Warhead_Tactical_Thermobaric: vanilla 80 dmg / 20.9 radius, clusterCount=10 -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Thermobaric"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/damageAmount</xpath>
+          <value>
+            <damageAmount>130</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Thermobaric"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>7.6</explosionRadius>
+          </value>
+        </li>
+
+        <!-- IRBM_Warhead_Tactical_Fission: vanilla 200 dmg / 75 AP / 12.9 radius -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Fission"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/damageAmount</xpath>
+          <value>
+            <damageAmount>220</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Fission"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/armorPenetration</xpath>
+          <value>
+            <armorPenetration>75</armorPenetration>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Fission"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>9.0</explosionRadius>
+          </value>
+        </li>
+
+        <!-- IRBM_Warhead_Tactical_MiniNuke: vanilla 800 dmg / 60 AP / 26.9 radius, clusterCount=3 -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_MiniNuke"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/damageAmount</xpath>
+          <value>
+            <damageAmount>900</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_MiniNuke"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/armorPenetration</xpath>
+          <value>
+            <armorPenetration>70</armorPenetration>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_MiniNuke"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>14.0</explosionRadius>
+          </value>
+        </li>
+
+        <!-- IRBM_Warhead_Tactical_BunkerBuster: vanilla 1500 dmg / 800 AP / 5.9 radius -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_BunkerBuster"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/damageAmount</xpath>
+          <value>
+            <damageAmount>1600</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_BunkerBuster"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/armorPenetration</xpath>
+          <value>
+            <armorPenetration>900</armorPenetration>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_BunkerBuster"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>5.2</explosionRadius>
+          </value>
+        </li>
+
+        <!-- IRBM_Warhead_Tactical_Antigrain payload[1]: main blast -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Antigrain"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][1]/damageAmount</xpath>
+          <value>
+            <damageAmount>700</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Antigrain"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][1]/armorPenetration</xpath>
+          <value>
+            <armorPenetration>90</armorPenetration>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Antigrain"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][1]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>12.0</explosionRadius>
+          </value>
+        </li>
+        <!-- IRBM_Warhead_Tactical_Antigrain payload[2]: EMP blast -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Antigrain"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][2]/damageAmount</xpath>
+          <value>
+            <damageAmount>180</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Antigrain"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][2]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>18.0</explosionRadius>
+          </value>
+        </li>
+
+        <!-- IRBM_Warhead_Tactical_Suppression payloads: stun + EMP -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Suppression"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][1]/damageAmount</xpath>
+          <value>
+            <damageAmount>220</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Suppression"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][1]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>8.5</explosionRadius>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Suppression"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][2]/damageAmount</xpath>
+          <value>
+            <damageAmount>220</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Suppression"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][2]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>10.0</explosionRadius>
+          </value>
+        </li>
+
+        <!-- IRBM_Warhead_Tactical_Stonehenge payload[1]: kinetic/penetration -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Stonehenge"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][1]/damageAmount</xpath>
+          <value>
+            <damageAmount>1300</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Stonehenge"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][1]/armorPenetration</xpath>
+          <value>
+            <armorPenetration>900</armorPenetration>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Stonehenge"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][1]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>10.5</explosionRadius>
+          </value>
+        </li>
+        <!-- IRBM_Warhead_Tactical_Stonehenge payload[2]: secondary blast -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Stonehenge"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][2]/damageAmount</xpath>
+          <value>
+            <damageAmount>260</damageAmount>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Stonehenge"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"][2]/explosionRadius</xpath>
+          <value>
+            <explosionRadius>18.0</explosionRadius>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

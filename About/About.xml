@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>IRBM - Combat Extended Compatibility</name>
+  <author>localdev</author>
+  <packageId>localdev.irbm.ce</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>CE balance patch for InterRim Ballistic Missile. Adjusts warhead explosion stats and CIWS ground-attack damage for Combat Extended armor/damage scaling.</description>
+  <modDependencies>
+    <li>
+      <packageId>kazepsi.irbm</packageId>
+      <displayName>InterRim Ballistic Missile</displayName>
+    </li>
+    <li>
+      <packageId>CETeam.CombatExtended</packageId>
+      <displayName>Combat Extended</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>CETeam.CombatExtended</li>
+    <li>kazepsi.irbm</li>
+  </loadAfter>
+</ModMetaData>
