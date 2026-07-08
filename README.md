@@ -39,6 +39,4 @@ Harmony → Combat Extended → IRBM → 本补丁
 - [平衡记录](docs/BALANCE_LOG.md)
 - [测试清单](docs/TEST_CHECKLIST.md)
 
-## 发布前
-
-将 `About/About.xml` 中的 `author` 与 `packageId`（当前为 `localdev.irbm.ce`）改为你自己的标识。
+**警告：这个模组还在开发和技术探索中！可能会出现平衡问题以及意料之外的bug！除非你真的需要这个补丁，否则不要下载**
