@@ -11,13 +11,13 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="IRBM_CIWS_Guns"]/modExtensions/li[@Class="IRBM.CIWSExtension"]/groundDamageAmount</xpath>
           <value>
-            <groundDamageAmount>32</groundDamageAmount>
+            <groundDamageAmount>55</groundDamageAmount>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="IRBM_CIWS_Guns"]/modExtensions/li[@Class="IRBM.CIWSExtension"]/groundDamageArmorPenetration</xpath>
           <value>
-            <groundDamageArmorPenetration>30</groundDamageArmorPenetration>
+            <groundDamageArmorPenetration>45</groundDamageArmorPenetration>
           </value>
         </li>
         <li Class="PatchOperationReplace">
