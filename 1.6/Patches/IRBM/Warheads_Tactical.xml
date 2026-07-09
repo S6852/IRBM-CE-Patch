@@ -14,13 +14,13 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_HE"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/armorPenetration</xpath>
     <value>
-      <armorPenetration>28</armorPenetration>
+      <armorPenetration>50</armorPenetration>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_HE"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/explosionRadius</xpath>
     <value>
-      <explosionRadius>6.5</explosionRadius>
+      <explosionRadius>9</explosionRadius>
     </value>
   </Operation>
 
@@ -44,7 +44,11 @@
     </value>
   </Operation>
 
-  <!-- IRBM_Warhead_Tactical_Inferno: vanilla 80 dmg / 1.0 AP / 9.9 radius, clusterCount=10 -->
+  <!-- IRBM_Warhead_Tactical_Inferno: vanilla 80 dmg / 1.0 AP / 9.9 radius, clusterCount=10.
+       AP 1.0 -> 1.5: Flame uses the Heat armor category (vanilla-style
+       percentage scale, not the mm RHA sharp scale), so 1.5 guarantees full
+       penetration. Stage 1 briefly used 14, which was harmless but on the
+       wrong scale. -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Inferno"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/damageAmount</xpath>
     <value>
@@ -54,7 +58,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Inferno"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]/armorPenetration</xpath>
     <value>
-      <armorPenetration>14</armorPenetration>
+      <armorPenetration>1.5</armorPenetration>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
