@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <!-- Stage 2B: special-effect tactical warheads (Acid, Cryo, Neural, Tox, etc.) -->
-  <!-- See docs/CE_COMPAT_PLAN.md section 3, stage 2B -->
+  <!-- See docs/CE_COMPAT_PLAN.md section 3, stage 2B and docs/STAGE2B_HANDOFF.md -->
+
+  <!-- Only Acid needs a patch. All other special warheads are intentionally
+       untouched: Smoke/Tox/Deadlife/Mine/Luciferium deliver gas or hediff
+       payloads that CE never touches; Neural rides Stun (no armor check) plus
+       an armor-bypassing hediff; Cryo (Frostbite) and Thermobaric (Vaporize)
+       have no sharp/blunt armor interaction. See STAGE2B_HANDOFF.md section 2. -->
+
+  <!-- IRBM_Warhead_Tactical_Acid: vanilla def has NO armorPenetration node, so
+       Add (not Replace). Vanilla AcidBurn is Sharp, but CE's own core patch
+       (Patches/Core/DamageDefs/Damages_LocalInjury.xml) rewrites AcidBurn's
+       armorCategory to Heat, which uses the vanilla-style percentage scale.
+       none -> 1.5: guarantees full penetration against any heat armor. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/IRBM.MissileWarheadDef[defName="IRBM_Warhead_Tactical_Acid"]/payloadComps/li[@Class="IRBM.WorldObjectCompProperties_TacticalPayload"]</xpath>
+    <value>
+      <armorPenetration>1.5</armorPenetration>
+    </value>
+  </Operation>
 </Patch>
